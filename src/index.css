@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0D0F14;
+  --bg-card: #161A23;
+  --border: #1E2433;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: 'DM Sans', sans-serif;
+}
