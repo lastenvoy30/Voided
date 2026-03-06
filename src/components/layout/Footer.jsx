@@ -1,4 +1,3 @@
-// src/components/layout/Footer.jsx
 import logo from "../../assets/Voided.svg";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 
