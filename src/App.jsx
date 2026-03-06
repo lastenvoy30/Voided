@@ -1,6 +1,7 @@
 import Navbar from "./components/layout/Navbar";
 import CountdownTimer from "./components/leaderboard/CountdownTimer";
 import HeroBanner from "./components/leaderboard/HeroBanner";
+import LeaderboardTable from "./components/leaderboard/LeaderboardTable";
 import Podium from "./components/leaderboard/Podium";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <HeroBanner />
       <Podium />
       <CountdownTimer />
+      <LeaderboardTable />
 
     </div>
   );
