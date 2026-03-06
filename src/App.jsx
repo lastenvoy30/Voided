@@ -1,4 +1,5 @@
 import Navbar from "./components/layout/Navbar";
+import CountdownTimer from "./components/leaderboard/CountdownTimer";
 import HeroBanner from "./components/leaderboard/HeroBanner";
 import Podium from "./components/leaderboard/Podium";
 
@@ -8,6 +9,8 @@ function App() {
       <Navbar />
       <HeroBanner />
       <Podium />
+      <CountdownTimer />
+
     </div>
   );
 }
