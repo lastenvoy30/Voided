@@ -1,4 +1,4 @@
-import Piggy from "../../assets/Piggy.svg"
+import Piggy from "../../assets/Piggy.svg";
 const mockTop3 = [
   { rank: 2, username: "USER", prize: 250, wager: 2000 },
   { rank: 1, username: "USER", prize: 250, wager: 2000 },
@@ -51,26 +51,33 @@ const HexCard = ({ player }) => {
   const innerH = config.outerH - borderThickness * 2;
 
   return (
-    <div className={`flex flex-col items-center ${config.order} ${config.marginBottom}`}>
+    <div
+      className={`flex flex-col items-center ${config.order} ${config.marginBottom}`}
+    >
       {/* Rank Badge */}
       <div
         className="text-white text-xs font-black px-4 py-1 rounded-full tracking-widest uppercase mb-2 z-20 relative"
-        style={{ background: config.badgeBg, boxShadow: `0 0 10px ${config.glowColor}` }}
+        style={{
+          background: config.badgeBg,
+          boxShadow: `0 0 10px ${config.glowColor}`,
+        }}
       >
         {config.label}
       </div>
 
       {/* Big Hex Container */}
-      <div className="relative flex items-center justify-center"
-        style={{ width: config.outerW, height: config.outerH }}>
-
+      <div
+        className="relative flex items-center justify-center"
+        style={{ width: config.outerW, height: config.outerH }}
+      >
         {/* Outer hex border */}
         <div
           className="absolute"
           style={{
             width: config.outerW,
             height: config.outerH,
-            clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            clipPath:
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
             background: config.borderColor,
             boxShadow: `0 0 30px ${config.glowColor}`,
           }}
@@ -82,25 +89,29 @@ const HexCard = ({ player }) => {
           style={{
             width: innerW,
             height: innerH,
-            clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            clipPath:
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
             background: "linear-gradient(160deg, #1c2133 0%, #0e1220 100%)",
           }}
         />
 
         {/* Card content inside hex */}
-        <div className="relative z-10 flex flex-col items-center justify-center gap-2 px-4"
-          style={{ width: innerW * 0.75 }}>
-
+        <div
+          className="relative z-10 flex flex-col items-center justify-center gap-2 px-4"
+          style={{ width: innerW * 0.75 }}
+        >
           {/* Avatar circle */}
-          <div className="rounded-full overflow-hidden border-2 border-blue-500"
+          <div
+            className="rounded-full overflow-hidden border-2 border-blue-500"
             style={{
               width: player.rank === 1 ? 90 : 72,
               height: player.rank === 1 ? 90 : 72,
               boxShadow: "0 0 16px rgba(59,130,246,0.5)",
-            }}>
+            }}
+          >
             <div className="w-full h-full bg-gradient-to-br from-blue-900 to-indigo-900 flex items-center justify-center">
               <span className={config.avatarSize}>
-              <img src={Piggy} alt="" />
+                <img src={Piggy} alt="" />
               </span>
             </div>
           </div>
@@ -120,8 +131,15 @@ const HexCard = ({ player }) => {
 
           {/* Wager */}
           <div className="flex flex-col items-center mt-1">
-            <span className="text-gray-500 text-xs tracking-widest uppercase">Wager</span>
-            <span className="text-white font-black text-lg">{player.wager}$</span>
+            <span className="text-gray-500 text-xs tracking-widest uppercase">
+              Wager
+            </span>
+            <div
+              className="text-white text-sm font-black px-4 py-1 rounded-full tracking-wider text-center mt-1"
+              style={{ background: config.prizeTagBg + "99" }}
+            >
+              {player.wager}$
+            </div>
           </div>
         </div>
       </div>
